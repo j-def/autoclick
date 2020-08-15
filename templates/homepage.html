@@ -1,0 +1,460 @@
+<html>
+<head>
+    <title>Link Hub</title>
+  <style>
+<style type="text/css">
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+*{
+ font-family: San Francisco;
+ color: white;
+}
+label {
+  margin-left: .5em;
+  margin-top: 0.3em;
+}
+.attachpassword{
+  dislay: inline-block;
+  color:white;
+  font-size:16px;
+  width: 50vw;
+  height: 2vh;
+  float: right;
+  margin-top: -2%;
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+.attachpassword > span {
+    padding: 0rem 0rem;
+}
+
+.attachpassword > input {
+    dislay: inline-block;
+    height: 2vh;
+    width: 2vh;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #5B5E71;
+    border-radius: 30%;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: #343644;
+    cursor: pointer;
+  }
+
+.attachpassword > input:checked {
+    border: 1px solid #31FF00;
+    background-color: #00A500;
+}
+
+.attachpassword > input:checked + span::before {
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0.7rem;
+    top: 0.2rem;
+}
+
+.attachpassword > input:active {
+    border: 2px solid #354434;
+}
+
+body{
+  background-color:#2e303d;
+}
+.linkbox{
+  text-align:left;
+  width: 35vw;
+  height: 40vh;
+  resize: none;
+  border-radius: 5px;
+  border-color: #5B5E71;
+  background-color: #343644;
+  padding-left: 2em;
+  padding-top:2em;
+  color: white;
+
+}
+h1{
+  display:inline-block;
+ font-weight: normal;
+  font-size:36px;
+  letter-spacing: .5em;
+  color: white;
+}
+.displaybox1{
+ overflow-y:auto;
+  margin-top:2%;
+  float:left;
+  width: 35vw;
+  height: 40.6vh;
+  border-style:solid;
+  border-color: white;
+  border-radius: 5px;
+  border-color: #5B5E71;
+  background-color: #343644;
+  border-width:1px;
+  color: white;
+  display: inline;
+  display: inline-block;
+}
+.displaybox2{
+  overflow-y:auto;
+  margin-top:2%;
+  float:right;
+  width: 35vw;
+  height: 40.6vh;
+  border-style:solid;
+  border-color: white;
+  border-radius: 5px;
+  border-color: #5B5E71;
+  background-color: #343644;
+  border-width:1px;
+  color: white;
+  display: inline-block;
+}
+    .user{
+      font-weight: normal;
+      margin-top:0px;
+      margin-left:0px;
+      float:left;
+    }
+
+.content{
+  font-weight: normal;
+  padding-left:15px;
+  font-size: 13px;
+  height: auto;
+  width: 30vw;
+  margin-top: 30px;
+  margin-left:auto;
+  margin-right: auto;
+  border-width:1px;
+  border-radius: 5px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,fc556e+0,fc556e+1,fc556e+1,fc556e+1,2e303d+1,2e303d+12,2e303d+35 */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(left,  #1e5799 0%, #fc556e 0%, #fc556e 1%, #fc556e 1%, #fc556e 1%, #2e303d 1%, #2e303d 12%, #2e303d 35%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #1e5799 0%,#fc556e 0%,#fc556e 1%,#fc556e 1%,#fc556e 1%,#2e303d 1%,#2e303d 12%,#2e303d 35%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #1e5799 0%,#fc556e 0%,#fc556e 1%,#fc556e 1%,#fc556e 1%,#2e303d 1%,#2e303d 12%,#2e303d 35%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#2e303d',GradientType=1 ); /* IE6-9 */
+
+
+}
+.inputbox{
+  color: white;
+  padding-left:  1em;
+  border-style: solid;
+  border-color: #5B5E71;
+  background-color:#343644;
+  width:35vw;
+  height: 5vh;
+  border-radius: 5px;
+  border-width:1px;
+}
+p{
+  font-size: 16px;
+  color: white;
+}
+.inputcontainer1{
+  float:left;
+  width: 35vw;
+  height: 9vh;
+
+}
+.inputcontainer2{
+  float:right;
+  width: 35vw;
+  height: 9vh;
+
+}
+.largecontainer{
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 72vw;
+  height: 62vh;
+  background-color:transparent;
+
+}
+.img{
+  display:inline-block;
+  margin-right: 3vw;
+  padding: 0px;
+}
+.logo{
+  display:inline-block;
+  position: relative;
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  height:auto;
+  text-align:center;
+  background-color: transparent;
+}
+.banner{
+  position: fixed;
+  left:0;
+  top:0;
+  height:5vh;
+  width:100vw;
+  background-color: #fc556e;
+}
+.attachpasswordcheckbox{
+  margin-left:auto;
+}
+.openlinkscheckbox{
+  margin-left:auto;
+}
+    .profilepic{
+      border-color: #979797;
+      display:inline-block;
+      float:left;
+      border-radius: 100%;
+      margin-top:0px;
+      margin-left:0px;
+      width:1.25em;
+      height:1.25em;
+    }
+    .name{
+      display:inline-block;
+      font-size: 100%;
+      margin-top:0.5vh;
+      margin-left:1vw;
+      margin-right: auto;
+      float: right;
+    }
+    .message{
+      font-size: 100%;
+      margin-top:3%;
+      margin-left:0px;
+    }
+    .time{
+      margin-top:.25vh;
+      font-size: 80%;
+      color:#7F8398;
+    }
+    .tweetheader{
+      display:inline-block;
+      width: auto;
+      margin-top:.55vh;
+      height:20px;
+    }
+    .urltext{
+      margin-left: 5%;
+    }
+        .openlinks{
+  dislay: inline-block;
+  color:white;
+  font-size:16px;
+  width: 50vw;
+  height: 2vh;
+  float: left;
+  margin-top: 4%;
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+.openlinks > span {
+    padding: 0rem 0rem;
+}
+
+.openlinks > input {
+    dislay: inline-block;
+    height: 2vh;
+    width: 2vh;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #5B5E71;
+    border-radius: 30%;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: #343644;
+    cursor: pointer;
+  }
+
+.openlinks > input:checked {
+    border: 1px solid #31FF00;
+    background-color: #00A500;
+}
+
+.openlinks > input:checked + span::before {
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0.7rem;
+    top: 0.2rem;
+}
+
+.openlinks > input:active {
+    border: 2px solid #354434;
+}
+  </style>
+ <script>
+var ws = new WebSocket("ws://104.129.17.39:8898/");
+ws.onmessage = function (event) {
+	var response = event.data;
+	var user = response.split(";")[0].toLowerCase();
+	var watcheduser = document.getElementById("twitterbox").value.toLowerCase();
+	var avatarurl = response.split(";")[1]
+	var tweetmsg = response.split(';').slice(2).join(';');
+	var tweet = document.createElement("div");
+	tweet.className = "content";
+	var header = document.createElement("div");
+	header.className = "tweetheader";
+	var avatar = document.createElement("img");
+	avatar.className = "profilepic";
+	avatar.src = avatarurl;
+	var name = document.createElement("p");
+	var nametext = document.createTextNode(user);
+	name.appendChild(nametext);
+	name.className = "name";
+	var tweetcontent = document.createElement("p");
+	tweetcontent.innerHTML = tweetmsg;
+	tweetcontent.className = "message";
+	header.appendChild(avatar);
+	header.appendChild(name);
+	var timestamp = document.createElement("p");
+	var timer = new Date();
+	timestamp.className = "time";
+	var timenode = document.createTextNode(timer.getHours() + ":" + timer.getMinutes() + ":" + timer.getSeconds() + "." + timer.getMilliseconds());
+	timestamp.appendChild(timenode);
+	tweet.appendChild(header);
+	tweet.appendChild(tweetcontent);
+	tweet.appendChild(timestamp);
+	if (user === watcheduser || watcheduser.length === 0) {
+		document.getElementById("displaybox2").appendChild(tweet);
+		var objDiv = document.getElementById("displaybox2");
+		objDiv.scrollTop = objDiv.scrollHeight;
+	}
+}
+  </script>
+
+  <script>
+var ws = new WebSocket("ws://104.129.17.39:8988/");
+ws.onmessage = function (event) {
+	var resposne = event.data.toLowerCase();
+	var user = resposne.split(';')[0];
+	var linkcount = Number(resposne.split(';')[1]);
+	var keywords = document.getElementById("keywordbox").value.toLowerCase();
+	var keywordarray = keywords.split(',');
+	var watcheduser = document.getElementById("twitterbox").value.toLowerCase();
+	var keywordslength = (keywords.match(/,/g) || []).length;
+	if (keywords.length > 0) {
+		var keywordslength = keywordslength + 1;
+	}
+	var i;
+	for (i = 2; i < linkcount + 2; i++) {
+		var timer = new Date();
+		var timenode = document.createTextNode("[" + timer.getHours() + ":" + timer.getMinutes() + ":" + timer.getSeconds() + "." + timer.getMilliseconds() + "] - ");
+		var link = resposne.split(";")[i];
+		var linkdiv = document.createElement("p");
+		linkdiv.appendChild(timenode);
+		var linkcontent = document.createElement("a");
+		linkcontent.href = link;
+		var text = document.createTextNode(link);
+		linkcontent.appendChild(text);
+		linkdiv.appendChild(linkcontent);
+		linkdiv.className = "urltext";
+		if (watcheduser === user || watcheduser.length === 0) {
+			document.getElementById("displaybox1").appendChild(linkdiv);
+			var objDiv = document.getElementById("displaybox1");
+			objDiv.scrollTop = objDiv.scrollHeight;
+    		var responsearray = resposne.split(';');
+            var tweetcontent = responsearray.pop();
+			var autoopen = false;
+			var e;
+			for (e=0;e<keywordslength;e++){
+			  if (tweetcontent.includes(keywordarray[e]) === true){
+			    autoopen = true;
+			  }
+			}
+			if (autoopen === true && keywordslength > 0 || document.getElementById("openlinks").checked === true) {
+              window.open(link,'_blank');
+			}
+		}
+	}
+};
+  </script>
+
+</head>
+  <body>
+  <div class="banner"></div>
+    <div class="logo">
+      <img class="img" src="https://cdn.discordapp.com/attachments/705557087500894269/705557292724125787/KuaiPNG.png" alt="KUAI" height="34" width="38">
+      <h1>KUAI</h1>
+    </div>
+    <div class="largecontainer">
+      <div class="inputcontainer1">
+        <p>Twitter Account</p>
+        <input type="text" class="inputbox" id="twitterbox" placeholder="Twitter Handle (KuaiAIO)">
+      </div>
+      <div class="inputcontainer2">
+        <p>Keywords</p>
+        <input type="text" class="inputbox" id="keywordbox" placeholder="Keywords (restock, live)" value="{{keywords}}">
+      </div>
+      <div class="openlinks">
+        <input type="checkbox" id="openlinks" class="openlinkscheckbox"  value="openlinks">
+        <label for="openlinks">Open All Links</label>
+      </div>
+      <div class="attachpassword">
+        <input type="checkbox" id="attachpassword" class="attachpasswordcheckbox"  value="attachpassword">
+        <label for="attachpassword">Attach Password</label>
+      </div>
+
+      <div class="displaybox1" id="displaybox1">
+
+      </div>
+
+      <div id="displaybox2" class="displaybox2">
+
+      </div>
+    </div>
+  </body>
+</html>
